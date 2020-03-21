@@ -2,14 +2,14 @@ import BaseLayout from "../components/layout/BaseLayout";
 import BasePage from "../components/BasePages";
 
 
-const About = ()=>{
+const Services = ()=>{
     return(
-        <BaseLayout title="About Page">
+        <BaseLayout title="Services Page">
             <BasePage>
-                <h1>hello about page</h1>
+                <h1>hello Services page</h1>
             </BasePage>
         </BaseLayout>
     )
 }
 
-export  default  About ;
+export  default Services ;

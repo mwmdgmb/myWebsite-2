@@ -1,0 +1,25 @@
+@import 'Pages/index-page';
+@import 'Components/colors';
+
+body , html {
+  margin: 0;
+  padding: 0;
+  background-color: $bg-home-page;
+  .active{
+    color: $color-link-navbar-active !important;
+  }
+}
+.padding-page{
+  padding-top: 150px;
+}
+#close{
+  display: none !important;
+}
+#icon-wrapper{
+  display: none !important;
+}
+
+
+@import "Pages/index-page";
+@import "Pages/about-page";
+@import "Pages/footer-page";
