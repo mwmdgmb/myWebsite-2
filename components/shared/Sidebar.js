@@ -1,22 +1,26 @@
 import React from 'react';
-
+import Modal from "./Modal";
 
 
 const SiteBar = (props)=> {
-
+    const {category , loading} = props ;
     return(
         <div>
-
+            <Modal />
             <h1 className="my-4">{props.appTitle}</h1>
-            <div className="list-group">
-                <a href="#" className="list-group-item">Category 1</a>
-                <a href="#" className="list-group-item">Category 2</a>
-                <a href="#" className="list-group-item">Category 3</a>
-            </div>
-            <div className="btn-group-sm">
-                <button className="btn btn-success my-2 mr-md-2 mr-sm-1 mr-2" onClick={props.Increment}>Increment Number { props.count }</button>
-                <button className="btn btn-danger" onClick={props.Decrement}>Decrement Number</button>
-            </div>
+            {loading ? (<div className="list-group">
+                {category.map(c=> <a
+                    key={c.id}
+                    href="#"
+                    className="list-group-item"
+                >
+                    {c.name}
+                </a>)}
+            </div>) : (<div className="card p-5">
+                <div className="spinner-border text-secondary" role="status">
+                    <span className="sr-only">Loading...</span>
+                </div>
+            </div>)}
 
         </div>
     )
