@@ -1,0 +1,39 @@
+[
+  {
+    "id": "1",
+    "name": "Shiraz",
+    "Years": 1994,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+    "ratting": 4.8,
+    "longDes": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+    "genre": "drama",
+    "image": "https://www.chistamedia.com/wp-content/uploads/2019/03/torists-destination-4-700x400.jpg",
+    "imageTow": "https://image.winudf.com/v2/image/Y29tLmxpbmVhZ2Uud2FsbHBhcGVyc2hkX3NjcmVlbl83XzE1MjU4MDE4OTBfMDky/screen-7.jpg?fakeurl=1&type=.jpg",
+    "imageThree": "https://www.wallpapermobi.com/timthumb.php?src=https://www.wallpapermobi.com/storage/upload/user_id_424/windows-10-wallpaper-4k-2020-01-31-10-38-10.jpg&w=700&h=400",
+    "view": "250,000"
+  },
+  {
+    "id": "2",
+    "name": "Shiraz",
+    "Years": 1994,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+    "ratting": 4.8,
+    "longDes": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+    "genre": "drama",
+    "image": "https://www.chistamedia.com/wp-content/uploads/2019/03/torists-destination-4-700x400.jpg",
+    "imageTow": "https://image.winudf.com/v2/image/Y29tLmxpbmVhZ2Uud2FsbHBhcGVyc2hkX3NjcmVlbl83XzE1MjU4MDE4OTBfMDky/screen-7.jpg?fakeurl=1&type=.jpg",
+    "imageThree": "https://www.wallpapermobi.com/timthumb.php?src=https://www.wallpapermobi.com/storage/upload/user_id_424/windows-10-wallpaper-4k-2020-01-31-10-38-10.jpg&w=700&h=400",
+    "view": "250,000"
+  },
+  {
+    "name": "mwmd",
+    "description": "some description",
+    "ratting": "4.3",
+    "image": "https://webcomicms.net/sites/default/files/clipart/161625/pic-football-161625-627179.jpg",
+    "imageTow": "https://cdn.business2community.com/wp-content/uploads/2015/12/700x400-linkedin-1.jpg.jpg",
+    "imageThree": "https://www.sainaco.net/wp-content/uploads/2019/07/iStock-847491206-700x400.jpg",
+    "longDes": "some text",
+    "genre": "fantasy",
+    "id": "fluyk"
+  }
+]
