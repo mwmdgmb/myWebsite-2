@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
 const MovieCreateForm = props => {
   const [isLoadedData, setIsLoadedData] = useState(false);
@@ -10,7 +11,16 @@ const MovieCreateForm = props => {
     image: "",
     imageTow: "",
     imageThree: "",
-    longDes: ""
+    longDes: "",
+    errors: {
+      name: "",
+      description: "",
+      ratting: "",
+      image: "",
+      imageTow: "",
+      imageThree: "",
+      longDes: ""
+    }
   });
 
   useEffect(() => {
@@ -22,11 +32,38 @@ const MovieCreateForm = props => {
 
   const handleChange = event => {
     event.preventDefault();
-    const target = event.target;
-    const name = target.name;
+    // const target = event.target;
+    // const name = target.name;
+    const { name, value } = event.target;
+    let errors = form.errors;
+    switch (name) {
+      case "name":
+        errors.name = value.length <= 0 ? "Empty Name" : "";
+        break;
+      case "description":
+        errors.description = value.length <= 0 ? "Empty Description" : "";
+        break;
+      case "ratting":
+        errors.ratting = value.length <= 0 ? "Empty Ratting" : "";
+        break;
+      case "image":
+        errors.image = value.length < 10 ? "Empty URL" : "";
+        break;
+      case "imageTow":
+        errors.imageTow = value.length < 10 ? "Empty URL" : "";
+        break;
+      case "imageThree":
+        errors.imageThree = value.length < 10 ? "Empty URL" : "";
+        break;
+      case "longDes":
+        errors.longDes = value.length < 10 ? "Empty Long Description" : "";
+        break;
+    }
+
     setForm({
       ...form,
-      [name]: target.value
+      errors,
+      [name]: value
     });
   };
   const handleGenreChange = event => {
@@ -46,21 +83,53 @@ const MovieCreateForm = props => {
     });
   };
   const submitForm = () => {
-    props.handleForSubmit({ ...form });
+    if (
+      form.name.length === 0 ||
+      form.description.length === 0 ||
+      form.ratting === 0 ||
+      form.image.length === 0 ||
+      form.imageTow.length === 0 ||
+      form.imageThree.length === 0 ||
+      form.longDes.length === 0
+    ) {
+      toast.error("please check it", {
+        position: toast.POSITION.BOTTOM_LEFT
+      });
+    } else {
+      toast.success("Movie created successfully", {
+        position: toast.POSITION.BOTTOM_LEFT
+      });
+      props.handleForSubmit({ ...form });
+    }
   };
 
   return (
     <form>
       <div className="form-group">
+        {form.errors.name &&
+        form.errors.description &&
+        form.errors.ratting &&
+        form.errors.image &&
+        form.errors.imageTow &&
+        form.errors.imageThree &&
+        form.errors.longDes ? (
+          <div className="alert alert-danger text-danger text-center">
+            Empty
+          </div>
+        ) : null}
+
         <label htmlFor="name">Name</label>
         <input
           value={form.name}
           type="text"
-          className="form-control"
+          className={
+            form.errors.name.length > 0
+              ? "form-control is-invalid"
+              : "form-control"
+          }
           id="name"
           name="name"
           onChange={handleChange}
-          required
         />
       </div>
       <div className="form-group">
@@ -68,11 +137,14 @@ const MovieCreateForm = props => {
         <input
           value={form.description}
           type="text"
-          className="form-control"
+          className={
+            form.errors.description.length > 0
+              ? "form-control is-invalid"
+              : "form-control"
+          }
           id="description"
           name="description"
           onChange={handleChange}
-          required
         />
       </div>
       <div className="form-group">
@@ -82,11 +154,14 @@ const MovieCreateForm = props => {
           type="number"
           max={5}
           min={0}
-          className="form-control"
+          className={
+            form.errors.ratting.length > 0
+              ? "form-control is-invalid"
+              : "form-control"
+          }
           id="ratting"
           name="ratting"
           onChange={handleChange}
-          required
         />
         <small id="emailHelp" className="form-text text-muted" defaultValue="3">
           Max: 5 , Min: 0
@@ -97,12 +172,15 @@ const MovieCreateForm = props => {
         <input
           value={form.image}
           type="text"
-          className="form-control"
+          className={
+            form.errors.image.length > 0
+              ? "form-control is-invalid"
+              : "form-control"
+          }
           id="image"
           placeholder="https://...."
           name="image"
           onChange={handleChange}
-          required
         />
       </div>
       <div className="form-group">
@@ -110,12 +188,15 @@ const MovieCreateForm = props => {
         <input
           value={form.imageTow}
           type="text"
-          className="form-control"
+          className={
+            form.errors.imageTow.length > 0
+              ? "form-control is-invalid"
+              : "form-control"
+          }
           id="imageTow"
           placeholder="https://...."
           name="imageTow"
           onChange={handleChange}
-          required
         />
       </div>
       <div className="form-group">
@@ -123,24 +204,30 @@ const MovieCreateForm = props => {
         <input
           value={form.imageThree}
           type="text"
-          className="form-control"
+          className={
+            form.errors.imageThree.length > 0
+              ? "form-control is-invalid"
+              : "form-control"
+          }
           id="imageThree"
           placeholder="https://...."
           name="imageThree"
           onChange={handleChange}
-          required
         />
       </div>
       <div className="form-group">
         <label htmlFor="longDes">Long Description</label>
         <textarea
           value={form.longDes}
-          className="form-control"
+          className={
+            form.errors.longDes.length > 0
+              ? "form-control is-invalid"
+              : "form-control"
+          }
           id="longDes"
           rows="3"
           name="longDes"
           onChange={handleChange}
-          required
         />
       </div>
 
@@ -159,9 +246,17 @@ const MovieCreateForm = props => {
           <option>fantasy</option>
         </select>
       </div>
-      <button type="button" onClick={submitForm} className="btn btn-primary">
-        Create Movie
-      </button>
+      {form.errors.name &&
+      form.errors.description &&
+      form.errors.ratting &&
+      form.errors.image &&
+      form.errors.imageTow &&
+      form.errors.imageThree &&
+      form.errors.longDes ? null : (
+        <button type="button" onClick={submitForm} className="btn btn-primary">
+          Create Movie
+        </button>
+      )}
     </form>
   );
 };

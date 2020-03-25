@@ -1,39 +1,62 @@
 [
   {
-    "id": "1",
-    "name": "Shiraz",
-    "Years": 1994,
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-    "ratting": 4.8,
-    "longDes": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-    "genre": "drama",
-    "image": "https://www.chistamedia.com/wp-content/uploads/2019/03/torists-destination-4-700x400.jpg",
-    "imageTow": "https://image.winudf.com/v2/image/Y29tLmxpbmVhZ2Uud2FsbHBhcGVyc2hkX3NjcmVlbl83XzE1MjU4MDE4OTBfMDky/screen-7.jpg?fakeurl=1&type=.jpg",
-    "imageThree": "https://www.wallpapermobi.com/timthumb.php?src=https://www.wallpapermobi.com/storage/upload/user_id_424/windows-10-wallpaper-4k-2020-01-31-10-38-10.jpg&w=700&h=400",
-    "view": "250,000"
-  },
-  {
-    "id": "2",
-    "name": "Shiraz",
-    "Years": 1994,
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-    "ratting": 4.8,
-    "longDes": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-    "genre": "drama",
-    "image": "https://www.chistamedia.com/wp-content/uploads/2019/03/torists-destination-4-700x400.jpg",
-    "imageTow": "https://image.winudf.com/v2/image/Y29tLmxpbmVhZ2Uud2FsbHBhcGVyc2hkX3NjcmVlbl83XzE1MjU4MDE4OTBfMDky/screen-7.jpg?fakeurl=1&type=.jpg",
-    "imageThree": "https://www.wallpapermobi.com/timthumb.php?src=https://www.wallpapermobi.com/storage/upload/user_id_424/windows-10-wallpaper-4k-2020-01-31-10-38-10.jpg&w=700&h=400",
-    "view": "250,000"
-  },
-  {
     "name": "mwmd",
     "description": "some description",
-    "ratting": "4.3",
-    "image": "https://webcomicms.net/sites/default/files/clipart/161625/pic-football-161625-627179.jpg",
+    "ratting": "2",
+    "image": "https://www.saniyaholidays.com/wp-content/uploads/2014/07/kerla1-700x400.jpg",
     "imageTow": "https://cdn.business2community.com/wp-content/uploads/2015/12/700x400-linkedin-1.jpg.jpg",
     "imageThree": "https://www.sainaco.net/wp-content/uploads/2019/07/iStock-847491206-700x400.jpg",
-    "longDes": "some text",
+    "longDes": "autoClose={2000}\n          position=\"bottom-left\"\n          className=\"toast-container\"\n          toastClassName=\"dark-toast\"autoClose={2000}\n          position=\"bottom-left\"\n          className=\"toast-container\"\n          toastClassName=\"dark-toast\"",
+    "errors": {
+      "name": "",
+      "description": "",
+      "ratting": "",
+      "image": "",
+      "imageTow": "",
+      "imageThree": "",
+      "longDes": ""
+    },
     "genre": "fantasy",
-    "id": "fluyk"
+    "id": "mfctw"
+  },
+  {
+    "name": "alex coress",
+    "description": "some description",
+    "ratting": "4.3",
+    "image": "https://lh4.googleusercontent.com/proxy/Tr5Lbwn0F1hv1h8kjcen4qja4qVjFXYmsj8CmavqRc3aEUKsziMrfRAQwVStIybxCUbJp8uWEJUJi3N_bsxrTniEgFPRwJZlYZTSKGEBqBrM8yCjvlRlYmHf94BKuEHB-OP9HqaqbKlCIZsKvNytZtiO2HuJyq2U3pb7tXNWW-2gu3Bw2mKgLUUNACTcwumNrOgrR04MMtLbzAuBAIk",
+    "imageTow": "https://lh4.googleusercontent.com/proxy/Tr5Lbwn0F1hv1h8kjcen4qja4qVjFXYmsj8CmavqRc3aEUKsziMrfRAQwVStIybxCUbJp8uWEJUJi3N_bsxrTniEgFPRwJZlYZTSKGEBqBrM8yCjvlRlYmHf94BKuEHB-OP9HqaqbKlCIZsKvNytZtiO2HuJyq2U3pb7tXNWW-2gu3Bw2mKgLUUNACTcwumNrOgrR04MMtLbzAuBAIk",
+    "imageThree": "https://lh4.googleusercontent.com/proxy/Tr5Lbwn0F1hv1h8kjcen4qja4qVjFXYmsj8CmavqRc3aEUKsziMrfRAQwVStIybxCUbJp8uWEJUJi3N_bsxrTniEgFPRwJZlYZTSKGEBqBrM8yCjvlRlYmHf94BKuEHB-OP9HqaqbKlCIZsKvNytZtiO2HuJyq2U3pb7tXNWW-2gu3Bw2mKgLUUNACTcwumNrOgrR04MMtLbzAuBAIk",
+    "longDes": "about not image",
+    "errors": {
+      "name": "",
+      "description": "",
+      "ratting": "",
+      "image": "",
+      "imageTow": "",
+      "imageThree": "",
+      "longDes": ""
+    },
+    "genre": "action",
+    "id": "0y899"
+  },
+  {
+    "name": "some name",
+    "description": "some description",
+    "ratting": "1.6",
+    "image": "https://newslinemagazine.com/wp-content/uploads/2016/10/Actor-In-Law-First-Look-Poster-700x400.jpg",
+    "imageTow": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR68C52pJXHbxPiDhGTS85CGbaRXw61vn2coiaDOnEJu-hPAwYPxA&s",
+    "imageThree": "https://lh3.googleusercontent.com/proxy/LmtSIM18XiOfk8181__UujBiMU8YN8fGw09OVgBmkY_OOoZlNHgOyy1VNC_sdWqeOEisssaTBl4nuWfIronJTiMHlCFKsd62cFF28MiTxcR2I5DCHrrYfAwJvUdTPMNTwmpW9WSX7gtRLElZAdltjkk7aNZDhXKzyO6K3cc",
+    "longDes": "some description",
+    "errors": {
+      "name": "",
+      "description": "",
+      "ratting": "",
+      "image": "",
+      "imageTow": "",
+      "imageThree": "",
+      "longDes": ""
+    },
+    "genre": "history",
+    "id": "0guok"
   }
 ]

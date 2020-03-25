@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { getMovieById, deleteMovies } from "../../../actions";
 import Link from "next/link";
 import React from "react";
+import { toast } from "react-toastify";
 
 const Movie = props => {
   const router = useRouter();
@@ -19,7 +20,9 @@ const Movie = props => {
 
   const deleteMovie = id => {
     deleteMovies(id).then(() => {
-      console.log("deleted");
+      toast.error("Movie deleted", {
+        position: toast.POSITION.BOTTOM_LEFT
+      });
       router.push("/");
     });
   };
@@ -58,21 +61,21 @@ const Movie = props => {
                   <div className="carousel-inner" role="listbox">
                     <div className="carousel-item active">
                       <img
-                        className="d-block img-fluid"
+                        className="d-block img-fluid w-100"
                         src={movies.image}
                         alt="First slide"
                       />
                     </div>
                     <div className="carousel-item">
                       <img
-                        className="d-block img-fluid"
+                        className="d-block img-fluid w-100"
                         src={movies.imageTow}
                         alt="Second slide"
                       />
                     </div>
                     <div className="carousel-item">
                       <img
-                        className="d-block img-fluid"
+                        className="d-block img-fluid w-100"
                         src={movies.imageThree}
                         alt="Third slide"
                       />

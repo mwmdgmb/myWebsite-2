@@ -20,7 +20,15 @@ html {
   display: none !important;
 }
 .carousel-item {
-  max-height: 450px;
+  max-height: 450px !important;
+  height: 440px;
+  object-fit: fill;
+}
+@media screen and (max-width: 1205px) {
+  .carousel-item img {
+    max-height: 450px !important;
+    height: 400px;
+  }
 }
 
 @import "Pages/index-page";
