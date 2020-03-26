@@ -58,9 +58,26 @@ app.prepare().then(() => {
     return res.json("Movie has been successfuly deteted !");
   });
 
-  server.get("*", (req, res) => {
-    return handle(req, res);
+  server.patch("/api/v1/movies/:id", (req, res) => {
+    const { id } = req.params;
+    const movie = req.body ;
+    const movieIndex = moviesData.findIndex(m => m.id === id);
+    moviesData[movieIndex] = movie ;
+
+    const pathToFile = path.join(__dirname, filPath);
+    const stringtifyData = JSON.stringify(moviesData, null, 2);
+
+    fs.writeFile(pathToFile, stringtifyData, error => {
+      if (error) {
+        return res.status(422).send(error);
+      }
+    });
+    return res.json(movie);
   });
+
+  // server.get("*", (req, res) => {
+  //   return handle(req, res);
+  // });
   const PORT = process.env.PORT || 3000;
 
   server.use(handle).listen(PORT, error => {

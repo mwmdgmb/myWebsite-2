@@ -21,10 +21,11 @@ export default class MovieLists extends Component {
           <div className="card-body">
             <h4 className="card-title">
               <Link href="/movies/[id]" as={`movies/${movie.id}`}>
-                <a className="nav-link">{movie.name}</a>
+                <a className="nav-link text-left ">{movie.name}</a>
               </Link>
             </h4>
-            <p className="card-text">
+            <p className="card-text d-flex flex-column">
+              <b>{movie.genre}</b>
               {this.shortenText(movie.description, 100)}
             </p>
           </div>

@@ -35,7 +35,7 @@ const Movie = props => {
             <a className="btn btn-secondary mb-3">Back</a>
           </Link>
           <div className="jumbotron">
-            <h1 className="display-1 pb-4">{movies.name}</h1>
+            <h1 className="pb-4 text-capitalize">{movies.name}</h1>
             <div className="row">
               <div className="col-md-9">
                 <div
@@ -102,6 +102,12 @@ const Movie = props => {
                   >
                     Delete
                   </button>
+                  <Link href="/movies/[id/edit" as={`/movies/${id}/edit`}>
+                    <button
+                        className="btn btn-warning btn-block mt-2">
+                      Edit
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

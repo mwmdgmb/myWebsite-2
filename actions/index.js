@@ -5,6 +5,7 @@ const URL = "http://localhost:3000";
 const MOVIE_DATA = [];
 
 const Category_data = [
+  { id: "0", name: "all" },
   { id: "1", name: "drama" },
   { id: "2", name: "action" },
   { id: "3", name: "history" },
@@ -39,4 +40,13 @@ export const getMovieById = id => {
 
 export const deleteMovies = id => {
   return axios.delete(`${URL}/api/v1/movies/${id}`).then(res => res.data);
+};
+
+export const updateMovie =(movie)=>{
+  return axios.patch(`${URL}/api/v1/movies/${movie.id}` , movie).then(res => res.data) ;
+};
+
+
+export const getPosts =()=>{
+  return axios.get(`${URL}/api/v1/post`).then(res => res.data) ;
 };

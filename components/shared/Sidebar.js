@@ -25,7 +25,13 @@ const SiteBar = props => {
       {loading ? (
         <div className="list-group">
           {category.map(c => (
-            <a key={c.id} href="#" className="list-group-item">
+            <a
+                onClick={()=>props.changeCatergory(c.name)}
+
+                key={c.id}
+                href="#"
+                className={`list-group-item nav-link ${props.activeCategory === c.name ? "active" : ""}`}
+            >
               {c.name}
             </a>
           ))}

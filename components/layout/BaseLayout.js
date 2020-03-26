@@ -5,7 +5,7 @@ import Footer from "../shared/Footer";
 
 
 const BaseLayout = (props) => {
-    const {children , title} = props ;
+    const {children , title , Name} = props ;
     return (
         <div>
             <Head>
@@ -17,7 +17,7 @@ const BaseLayout = (props) => {
             </Head>
             <Nav />
            <main >
-               <div className="base-layout">{children}</div>
+               <div className={Name || "base-layout"}>{children}</div>
            </main>
             <Footer/>
         </div>

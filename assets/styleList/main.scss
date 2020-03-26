@@ -1,4 +1,3 @@
-@import "Pages/index-page";
 @import "Components/colors";
 
 body,
@@ -6,6 +5,8 @@ html {
   margin: 0;
   padding: 0;
   background-color: $bg-home-page;
+  min-height:100vh ;
+  position: relative;
   .active {
     color: $color-link-navbar-active !important;
   }
@@ -24,6 +25,11 @@ html {
   height: 440px;
   object-fit: fill;
 }
+.list-group-item.active{
+  background: #343a40 !important;
+  text-decoration: none !important;
+}
+
 @media screen and (max-width: 1205px) {
   .carousel-item img {
     max-height: 450px !important;

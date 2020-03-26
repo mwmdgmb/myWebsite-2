@@ -2,9 +2,8 @@ import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 
 const MovieCreateForm = props => {
-  const [isLoadedData, setIsLoadedData] = useState(false);
 
-  const [form, setForm] = useState({
+  const defaultData = {
     name: "",
     description: "",
     ratting: "",
@@ -21,7 +20,12 @@ const MovieCreateForm = props => {
       imageThree: "",
       longDes: ""
     }
-  });
+  }
+  const [isLoadedData, setIsLoadedData] = useState(false);
+
+  // const formData = props.movies ? {...props.movies} : defaultData ;
+
+  const [form, setForm] = useState(defaultData);
 
   useEffect(() => {
     if (props.movies) {
@@ -254,7 +258,7 @@ const MovieCreateForm = props => {
       form.errors.imageThree &&
       form.errors.longDes ? null : (
         <button type="button" onClick={submitForm} className="btn btn-primary">
-          Create Movie
+          {props.submitButton || "Create"} Movie
         </button>
       )}
     </form>

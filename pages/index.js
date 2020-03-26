@@ -68,10 +68,10 @@ export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
       movies: [],
       loading: false,
-      error: ""
+      error: "",
+      filter :"all"
     };
   }
 
@@ -87,20 +87,25 @@ export default class Home extends Component {
     this.setState({ movies, loading: false });
   }
 
-  Increment = () => {
+
+  changeCatergory = category =>{
     this.setState({
-      count: this.state.count + 1
-    });
+      filter:category
+    })
   };
 
-  Decrement = () => {
-    this.setState({
-      count: this.state.count - 1
-    });
+  filteredMovies = (movies) =>{
+    const {filter} = this.state ;
+    if(filter === "all"){
+      return movies
+    }
+    return movies.filter((movie)=>{
+      return movie.genre && movie.genre.includes(filter)
+    })
   };
 
   render() {
-    const { loading, error, count } = this.state;
+    const { loading, error ,filter } = this.state;
     const { images, category, movies } = this.props;
     return (
       <BaseLayout title="Home Page">
@@ -120,15 +125,15 @@ export default class Home extends Component {
                     <SiteBar
                       appTitle="MongoDB"
                       category={category}
-                      count={count}
-                      Decrement={this.Decrement}
-                      Increment={this.Increment}
+                      activeCategory={filter}
                       loading={loading}
+                      changeCatergory={this.changeCatergory}
                     />
                   )}
                 </div>
                 <div className="col-lg-9">
                   <Carousel images={images} />
+                  <button className="btn btn-success">Displaying {filter}</button>
                 </div>
                 <div className="row d-flex flex-row col-lg-9 ml-auto mr-1 pb-3">
                   {error ? (
@@ -139,7 +144,7 @@ export default class Home extends Component {
                       {error}
                     </div>
                   ) : (
-                    <MovieLists movies={movies} loading={loading} />
+                    <MovieLists movies={this.filteredMovies(movies)} loading={loading} />
                   )}
                 </div>
               </div>
